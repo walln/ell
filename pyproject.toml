@@ -6,9 +6,7 @@ authors = ["William Guss <will@lrsys.xyz>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/MadcowD/ell"
-packages = [
-    { include = "ell", from = "src" }
-]
+packages = [{ include = "ell", from = "src" }]
 homepage = "https://docs.ell.so"
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -17,17 +15,26 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9"
+    "Programming Language :: Python :: 3.9",
 ]
 include = [
-    { path = "src/ell/studio/static", format = ["sdist", "wheel"] },
-    { path = "src/ell/studio/static/**/*", format = ["sdist", "wheel"] },
-    { path = "src/ell/util/char_bitmaps.npy", format = ["sdist", "wheel"] }
+    { path = "src/ell/studio/static", format = [
+        "sdist",
+        "wheel",
+    ] },
+    { path = "src/ell/studio/static/**/*", format = [
+        "sdist",
+        "wheel",
+    ] },
+    { path = "src/ell/util/char_bitmaps.npy", format = [
+        "sdist",
+        "wheel",
+    ] },
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
-fastapi = "^0.111.1"
+fastapi = "^0.115"
 numpy = ">=1.26.0"
 dill = "^0.3.8"
 colorama = "^0.4.6"
